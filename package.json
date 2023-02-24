@@ -63,8 +63,8 @@
     "global": "^4.4.0",
     "m3u8-parser": "^6.0.0",
     "mpd-parser": "^1.0.1",
-    "mux.js": "https://github.com/MetaCDN/mux.js.git",
-    "video.js": "https://github.com/MetaCDN/video.js.git"
+    "mux.js": "../mux.js",
+    "video.js": "../video.js"
   },
   "peerDependencies": {
     "video.js": "^7 || ^8"
