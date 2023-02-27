@@ -558,6 +558,7 @@ export default class SegmentLoader extends videojs.EventTarget {
     this.state_ = 'INIT';
     this.timelineChangeController_ = settings.timelineChangeController;
     this.shouldSaveSegmentTimingInfo_ = true;
+    this.parse608captions_ = settings.parse608captions;
     this.parse708captions_ = settings.parse708captions;
     this.captionServices_ = settings.captionServices;
     this.experimentalExactManifestTimings = settings.experimentalExactManifestTimings;
@@ -681,6 +682,7 @@ export default class SegmentLoader extends videojs.EventTarget {
       remux: false,
       alignGopsAtEnd: this.safeAppend_,
       keepOriginalTimestamps: true,
+      parse608captions: this.parse608captions_,
       parse708captions: this.parse708captions_,
       captionServices: this.captionServices_
     });
