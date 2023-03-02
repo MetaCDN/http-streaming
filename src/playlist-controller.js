@@ -236,6 +236,7 @@ export class PlaylistController extends videojs.EventTarget {
 
     const segmentLoaderSettings = {
       vhs: this.vhs_,
+      parse608captions: options.parse608captions,
       parse708captions: options.parse708captions,
       useDtsForTimestampOffset: options.useDtsForTimestampOffset,
       captionServices,
