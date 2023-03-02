@@ -65,7 +65,7 @@
     "video.js": "../video.js"
   },
   "peerDependencies": {
-    "video.js": "^6 || ^7"
+    "video.js": "../video.js"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^2.3.4",
