@@ -5,7 +5,6 @@
 * [Releases](#releases)
   * [Getting dependencies](#getting-dependencies)
     * [npm access](#npm-access)
-    * [GitHub personal access token](#github-personal-access-token)
   * [Deciding what type of version release](#deciding-what-type-of-version-release)
   * [Doing a release](#doing-a-release)
 * [Doc credit](#doc-credit)
@@ -30,12 +29,6 @@ npm owner ls @videojs/http-streaming
 
 If you are a core committer, you can request access to npm from one of the current owners.
 Access is managed via an [npm organization][npm org] for [Video.js][vjs npm].
-
-#### GitHub personal access token
-
-This is used to make a GitHub release on videojs. You can get a token from the [personal access tokens](https://github.com/settings/tokens) page.
-
-After generating one, make sure to keep it safe because GitHub will not show the token for you again. A good place to save it is Lastpass Secure Notes.
 
 ### Deciding what type of version release
 
@@ -81,7 +74,7 @@ Afterwards, you want to push the commit and the tag to the repo.
 It's necessary to do this before running `npm publish` because our GitHub release automation relies on the commit being available on GitHub.
 
 ```sh
-git push --follow-tags origin master
+git push --follow-tags origin main
 ```
 
 Publish to npm.
@@ -90,15 +83,13 @@ Publish to npm.
 npm publish
 ```
 
-After it's done, [create a release in github](https://github.com/videojs/http-streaming/releases/new) with latest tag, no title, description copied from [the changelog](https://github.com/videojs/http-streaming/blob/master/CHANGELOG.md), and the .min.js and .js dist files attached.
-
 If it's a large enough release, consider writing a blog post as well.
 
 ## Doc credit
 
-This collaborator guide was heavily inspired by [node.js's guide](https://github.com/nodejs/node/blob/master/COLLABORATOR_GUIDE.md) and [video.js's guide](https://github.com/videojs/video.js/blob/master/COLLABORATOR_GUIDE.md)
+This collaborator guide was heavily inspired by [node.js's guide](https://github.com/nodejs/node/blob/main/COLLABORATOR_GUIDE.md) and [video.js's guide](https://github.com/videojs/video.js/blob/main/COLLABORATOR_GUIDE.md)
 
-[conventions]: https://github.com/videojs/conventional-changelog-videojs/blob/master/convention.md
+[conventions]: https://github.com/videojs/conventional-changelog-videojs/blob/main/convention.md
 
 [vjs npm]: http://npmjs.com/org/videojs
 
