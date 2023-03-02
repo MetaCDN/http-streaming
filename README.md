@@ -41,6 +41,7 @@ Video.js Compatibility: 6.0, 7.0
       - [withCredentials](#withcredentials)
       - [handleManifestRedirects](#handlemanifestredirects)
       - [useCueTags](#usecuetags)
+      - [parse608captions](#parse608captions)
       - [parse708captions](#parse708captions)
       - [overrideNative](#overridenative)
       - [blacklistDuration](#blacklistduration)
@@ -322,6 +323,13 @@ cuesTrack.addEventListener('cuechange', function() {
   }
 });
 ```
+
+##### parse608captions
+* Type: `boolean`
+* Default: `true`
+* can be used as an initialization option
+
+When set to `false`, 608 captions in the stream are not parsed and will not show up in text track lists or the captions menu.
 
 ##### parse708captions
 * Type: `boolean`
